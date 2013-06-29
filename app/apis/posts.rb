@@ -6,8 +6,8 @@ class Posts < Grape::API
   resource 'posts' do
     get "/" do
 	  coll = env.mongo.collection('users')
-      #coll.insert({"item" => "user11111", "py" => 1})
-	  coll.find({})
+      coll.insert({"item" => "user11111", "py" => 1})
+	  #coll.find({})
     end
     
   end
